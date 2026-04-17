@@ -12,7 +12,7 @@ r = redis.Redis(host=redis_host, port=redis_port)
 @app.route("/")
 def hello():
     count = r.incr("visits")
-    return f"Hello from Zynex CI/CD ! Jenkins Pipeline added in Github!!! Visits: {count}"
+    return f"Hello from Zynex CI/CD ! Image has been pushed to dockerhub!!! Visits: {count}"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
