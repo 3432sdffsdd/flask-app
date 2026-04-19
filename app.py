@@ -12,7 +12,7 @@ r = redis.Redis(host=redis_host, port=redis_port)
 @app.route("/")
 def hello():
     count = r.incr("visits")
-    return f"dsa restored sadasd !! Jenkins CI/CD completed sadsa!!! Visitssss: {count}"
+    return f"hello world!!! Visitssss: {count}"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
